@@ -75,7 +75,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Run ESLint Fix
-        run: npx eslint . --fix
+        run: npx eslint . --fix --config eslint.config.ts
       - name: Commit changes
         run: |
           git config user.name github-actions
