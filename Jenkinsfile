@@ -1,6 +1,11 @@
 pipeline {
-   agent { docker { image 'mcr.microsoft.com/playwright:v1.55.0-noble' } }
+   agent any;
    stages {
+      stage('Pull Playwright image') {
+            steps {
+                sh 'sudo docker pull mcr.microsoft.com/playwright:v1.55.0-noble'
+            }
+      }
       stage('e2e-tests') {
          steps {
             sh 'npm ci'
