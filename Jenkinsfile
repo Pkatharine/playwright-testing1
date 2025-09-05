@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Pull Playwright image') {
             steps {
-                sh 'docker pull mcr.microsoft.com/playwright:v1.55.0-noble'
+                sh '/usr/local/bin/docker pull mcr.microsoft.com/playwright:v1.55.0-noble'
             }
       }
       stage('e2e-tests') {
