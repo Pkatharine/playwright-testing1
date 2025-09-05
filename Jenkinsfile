@@ -1,9 +1,9 @@
 pipeline {
-   agent any;
+   agent any
    stages {
       stage('Pull Playwright image') {
             steps {
-                sh 'sudo docker pull mcr.microsoft.com/playwright:v1.55.0-noble'
+                sh 'docker pull mcr.microsoft.com/playwright:v1.55.0-noble'
             }
       }
       stage('e2e-tests') {
