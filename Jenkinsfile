@@ -10,7 +10,7 @@ pipeline {
          steps {
             sh 'npm ci'
             sh 'npx playwright install'
-            sh 'npx playwright test'
+            sh 'npx playwright test --reporter=html'
          }
          post {
             always {
