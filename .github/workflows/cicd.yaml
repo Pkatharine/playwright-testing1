@@ -46,7 +46,7 @@ jobs:
           if: ${{ !cancelled() }}
           with:
             name: Integration Tests (Playwright)
-            path: playwright-reports/index.html
+            path: playwright-report/index.html
             if-no-files-found: error
 
   e2e:
