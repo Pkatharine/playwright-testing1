@@ -41,7 +41,7 @@ jobs:
         - name: Install Playwright Browsers
           run: npx playwright install --with-deps
         - name: Run Playwright tests
-          run: npx playwright test
+          run: npx playwright test --update-snapshots
         - uses: actions/upload-artifact@v4
           if: ${{ !cancelled() }}
           with:
@@ -60,4 +60,4 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Run Playwright E2E
-        run: npx playwright test
+        run: npx playwright test --update-snapshots
