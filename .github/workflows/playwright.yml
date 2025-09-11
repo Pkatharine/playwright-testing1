@@ -73,9 +73,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install deps
-        run: npm ci
+          run: npm ci --include=dev
+      - name: Verify jiti is present
+          run: npx jiti --version
       - name: Run ESLint Fix
-        run: npx eslint . --fix --config eslint.config.ts
+          run: npx eslint . --fix --config eslint.config.ts
       - name: Commit changes
         run: |
           git config user.name github-actions
