@@ -3,7 +3,6 @@ import {test, expect} from '../../fixture';
 test.describe('Booking Availability Tests', () => {
 
   test('should check booking availability for today\'s date', async ({ homePage, page }) => {
-    // Navigate to the homepage
     await homePage.navigate();
 
     // Assert that at least one booking is available
